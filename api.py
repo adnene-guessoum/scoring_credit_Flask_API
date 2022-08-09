@@ -32,8 +32,9 @@ def index():
 # endpoint: prédiction octroie de credit (oui, non pour un client)
 
 #Load Dataframe
-path_df = 'selected_feature_dataset'
+path_df = 'restricted_dataset'
 df = pd.read_csv(path_df)
+df = df.drop(['Unnamed: 0'], axis = 1)
 
 #Load model
 path_model = 'model_final.pickle.dat'
@@ -66,5 +67,5 @@ def predict_credit(ID):
 
 #si ce script est le script lancer:
 if __name__ == "__main__":
-    # url à saisir: http://localhost:5000/ ou http://127.0.0.1:5000
+    # url local: http://localhost:5000/ ou http://127.0.0.1:5000
     app.run()
