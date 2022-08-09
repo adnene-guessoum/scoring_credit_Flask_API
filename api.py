@@ -45,7 +45,7 @@ model = pickle.load(open(path_model,'rb'))
 
 #@app.route('/api/credit/<ID>', methods=['POST'])
 
-@app.route('/api/credit/<int:ID>')
+@app.route('/<int:ID>')
 def predict_credit(ID):     
     
     #retourne pour un client si crédit est accordé
