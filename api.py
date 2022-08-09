@@ -8,7 +8,7 @@ Created on Fri Jun 24 16:10:30 2022
 import flask
 import json
 import requests
-import streamlit as st
+#import streamlit as st
 
 from tools.preprocess import cleaning
 import pandas as pd
@@ -22,14 +22,11 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 
-
-
-
 #page d'accueil du site
 @app.route('/')
 def index():
     # A welcome message to test our server
-    return st.title("Bienvenu sur l'api Flask: projet 7 scoring credit! Par Adnene.")
+    return "<h1> Bienvenu sur l'api Flask: projet 7 scoring credit! Par Adnene.</h1>"
 
 
 # endpoint: prédiction octroie de credit (oui, non pour un client)
@@ -69,6 +66,6 @@ def predict_credit(ID):
     return flask.jsonify(dictionnaire)
 
 #si ce script est le script lancer:
-#if __name__ == "__main__":
+if __name__ == "__main__":
     # url local: http://localhost:5000/ ou http://127.0.0.1:5000
-    #app.run()
+    app.run()
