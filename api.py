@@ -8,6 +8,7 @@ Created on Fri Jun 24 16:10:30 2022
 import flask
 import json
 import requests
+import streamlit as st
 
 from tools.preprocess import cleaning
 import pandas as pd
@@ -24,6 +25,7 @@ app.config["DEBUG"] = True
 
 #page d'accueil du site
 @app.route('/')
+st.title("Bienvenu sur l'api Flask du projet 7 scoring credit! Par Adnene.")
 def index():
     # A welcome message to test our server
     return "<h1>Bienvenu sur l'api Flask du projet 7 scoring credit! Par Adnene.</h1>"
