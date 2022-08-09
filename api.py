@@ -23,12 +23,13 @@ app.config["DEBUG"] = True
 
 
 
+
+
 #page d'accueil du site
 @app.route('/')
-st.title("Bienvenu sur l'api Flask du projet 7 scoring credit! Par Adnene.")
 def index():
     # A welcome message to test our server
-    return "<h1>Bienvenu sur l'api Flask du projet 7 scoring credit! Par Adnene.</h1>"
+    return st.title("Bienvenu sur l'api Flask: projet 7 scoring credit! Par Adnene.")
 
 
 # endpoint: prédiction octroie de credit (oui, non pour un client)
